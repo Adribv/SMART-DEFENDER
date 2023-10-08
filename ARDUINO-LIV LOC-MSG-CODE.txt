@@ -1,0 +1,22 @@
+#include <SoftwareSerial.h>
+
+SoftwareSerial bluetoothSerial(10, 11); 
+
+
+void setup() {
+  
+  Serial.begin(9600);
+  bluetoothSerial.begin(9600);
+
+
+ 
+}
+
+void loop() {
+
+  
+
+ if (buttonState == HIGH) {
+    bluetoothSerial.write(1);
+    delay(1000); 
+}
